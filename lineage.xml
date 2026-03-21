@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manifest>
+
+  <remote  name="LineageOS"
+           fetch="https://github.com/LineageOS"
+           sync-c="true"
+           sync-j="4"
+           revision="refs/heads/lineage-23.2" />
+
+<!-- BUILD -->
+<project path="build/make" name="android_build" groups="pdk,sysui-studio" remote="LineageOS" >
+    <linkfile src="CleanSpec.mk" dest="build/CleanSpec.mk" />
+    <linkfile src="buildspec.mk.default" dest="build/buildspec.mk.default" />
+    <linkfile src="core" dest="build/core" />
+    <linkfile src="envsetup.sh" dest="build/envsetup.sh" />
+    <linkfile src="target" dest="build/target" />
+    <linkfile src="tools" dest="build/tools" />
+</project>
+<project path="build/soong" name="android_build_soong" groups="pdk,tradefed,sysui-studio" remote="LineageOS" >
+    <linkfile src="root.bp" dest="Android.bp" />
+    <linkfile src="bootstrap.bash" dest="bootstrap.bash" />
+</project>
+
+<!-- BIONIC -->
+<project path="bionic" name="android_bionic" groups="pdk" remote="LineageOS" />
+
+<!-- BOOTABLE -->
+<project path="bootable/deprecated-ota" name="android_bootable_deprecated-ota" groups="pdk-cw" remote="LineageOS" />
+<project path="bootable/recovery" name="android_bootable_recovery" groups="pdk" remote="LineageOS" />
+
+<!-- DEVELOPMENT -->
+<project path="development" name="android_development" groups="developers,pdk-cw-fs,pdk-fs,sysui-studio" remote="LineageOS" />
+
+<!-- DEVICE -->
+<project path="device/generic/car" name="android_device_generic_car" groups="pdk" remote="LineageOS" />
+<project path="device/generic/common" name="android_device_generic_common" groups="pdk" remote="LineageOS" />
+<project path="device/generic/goldfish" name="android_device_generic_goldfish" groups="pdk" remote="LineageOS" />
+<project path="device/google_car" name="android_device_google_car" groups="device,pdk" remote="LineageOS" />
+<project path="device/google/atv" name="android_device_google_atv" groups="device,broadcom_pdk,generic_fs,pdk" remote="LineageOS" />
+<project path="device/google/contexthub" name="android_device_google_contexthub" groups="device,pdk" remote="LineageOS" />
+
+<!-- EXTERNAL -->
+<project path="external/arm-trusted-firmware" name="android_external_arm-trusted-firmware" groups="pdk" remote="LineageOS" />
+<project path="external/avb" name="android_external_avb" groups="pdk" remote="LineageOS" />
+<project path="external/dng_sdk" name="android_external_dng_sdk" groups="pdk" remote="LineageOS" />
+<project path="external/dtc" name="android_external_dtc" groups="pdk" remote="LineageOS" />
+<project path="external/e2fsprogs" name="android_external_e2fsprogs" groups="pdk" remote="LineageOS" />
+<project path="external/gptfdisk" name="android_external_gptfdisk" groups="pdk" remote="LineageOS" />
+<project path="external/libjxl" name="android_external_libjxl" groups="pdk" remote="LineageOS" />
+<project path="external/mksh" name="android_external_mksh" groups="pdk" remote="LineageOS" />
+<project path="external/setupcompat" name="android_external_setupcompat" groups="pdk,sysui-studio" remote="LineageOS" />
+<project path="external/tinycompress" name="android_external_tinycompress" groups="pdk" remote="LineageOS" />
+<project path="external/wpa_supplicant_8" name="android_external_wpa_supplicant_8" groups="pdk" remote="LineageOS" />
+<project path="external/zstd" name="android_external_zstd" remote="LineageOS" />
+
+<!-- FRAMEWORKS -->
+<project path="frameworks/av" name="android_frameworks_av" groups="pdk,sysui-studio" remote="LineageOS" />
+<project path="frameworks/base" name="android_frameworks_base" groups="pdk-cw-fs,pdk-fs,sysui-studio" remote="LineageOS" />
+<project path="frameworks/libs/systemui" name="android_frameworks_libs_systemui" groups="pdk-cw-fs,pdk-fs,sysui-studio" remote="LineageOS" />
+<project path="frameworks/native" name="android_frameworks_native" groups="pdk" remote="LineageOS" />
+<project path="frameworks/opt/telephony" name="android_frameworks_opt_telephony" groups="pdk,sysui-studio" remote="LineageOS" />
+
+<!-- HARDWARE -->
+<project path="hardware/broadcom/libbt" name="android_hardware_broadcom_libbt" groups="pdk" remote="LineageOS" />
+<project path="hardware/google/camera" name="android_hardware_google_camera" groups="pdk" remote="LineageOS" />
+<project path="hardware/google/pixel" name="android_hardware_google_pixel" groups="generic_fs,pixel,pdk-gs-arm,pdk-gs-imgtec,pdk-desktop" remote="LineageOS" />
+<project path="hardware/google/pixel-sepolicy" name="android_hardware_google_pixel-sepolicy" groups="generic_fs,pixel,pdk-desktop" remote="LineageOS" />
+<project path="hardware/interfaces" name="android_hardware_interfaces" groups="pdk,sysui-studio" remote="LineageOS" />
+<project path="hardware/libhardware" name="android_hardware_libhardware" groups="pdk" remote="LineageOS" />
+<project path="hardware/nxp/nfc" name="android_hardware_nxp_nfc" groups="pdk" remote="LineageOS" />
+<project path="hardware/qcom/wlan" name="android_hardware_qcom_wlan" groups="qcom,qcom_wlan,pdk-qcom" remote="LineageOS" />
+<project path="hardware/samsung/nfc" name="android_hardware_samsung_nfc" groups="pdk" remote="LineageOS" />
+<project path="hardware/st/nfc" name="android_hardware_st_nfc" groups="pdk" remote="LineageOS" />
+
+<!-- KERNEL -->
+<project path="kernel/configs" name="android_kernel_configs" groups="vts,pdk" remote="LineageOS" />
+
+<!-- PACKAGES/APPS -->
+<project path="packages/apps/Car/References" name="android_packages_apps_Car_References" groups="pdk-fs" remote="LineageOS" />
+<project path="packages/apps/Car/Settings" name="android_packages_apps_Car_Settings" groups="pdk-fs,pdk-cw-tvc" remote="LineageOS" />
+<project path="packages/apps/Car/SystemUI" name="android_packages_apps_Car_SystemUI" groups="pdk-fs,pdk-cw-tvc" remote="LineageOS" />
+<project path="packages/apps/CellBroadcastReceiver" name="android_packages_apps_CellBroadcastReceiver" groups="pdk-cw-fs,pdk-fs" remote="LineageOS" />
+<project path="packages/apps/Contacts" name="android_packages_apps_Contacts" groups="pdk-fs" remote="LineageOS" />
+<project path="packages/apps/Dialer" name="android_packages_apps_Dialer" groups="pdk-fs" remote="LineageOS" />
+<project path="packages/apps/DocumentsUI" name="android_packages_apps_DocumentsUI" groups="pdk-cw-fs,pdk-fs" remote="LineageOS" />
+<project path="packages/apps/EmergencyInfo" name="android_packages_apps_EmergencyInfo" groups="pdk-fs" remote="LineageOS" />
+<project path="packages/apps/Launcher3" name="android_packages_apps_Launcher3" groups="pdk-fs,sysui-studio,pdk-cw-tvc" remote="LineageOS" />
+<project path="packages/apps/Messaging" name="android_packages_apps_Messaging" groups="pdk-fs" remote="LineageOS" />
+<project path="packages/apps/Settings" name="android_packages_apps_Settings" groups="pdk-fs,pdk-cw-tvc,sysui-studio" remote="LineageOS" />
+<project path="packages/apps/SettingsIntelligence" name="android_packages_apps_SettingsIntelligence" groups="pdk-fs" remote="LineageOS" />
+<project path="packages/apps/Stk" name="android_packages_apps_Stk" groups="apps_stk,pdk-fs" remote="LineageOS" />
+<project path="packages/apps/Tag" name="android_packages_apps_Tag" groups="pdk-fs" remote="LineageOS" />
+<project path="packages/apps/ThemePicker" name="android_packages_apps_ThemePicker" groups="pdk-fs,sysui-studio" remote="LineageOS" />
+<project path="packages/apps/TvSettings" name="android_packages_apps_TvSettings" groups="pdk-fs,pdk-cw-tvc" remote="LineageOS" />
+<project path="packages/apps/TvSystemUI" name="android_packages_apps_TvSystemUI" groups="pdk-fs" remote="LineageOS" />
+<project path="packages/apps/WallpaperPicker2" name="android_packages_apps_WallpaperPicker2" groups="pdk-fs,sysui-studio" remote="LineageOS" />
+
+<!-- PACKAGES/MODULES -->
+<project path="packages/modules/adb" name="android_packages_modules_adb" groups="pdk" remote="LineageOS" />
+<project path="packages/modules/Bluetooth" name="android_packages_modules_Bluetooth" groups="pdk" remote="LineageOS" />
+<project path="packages/modules/common" name="android_packages_modules_common" groups="pdk-cw-fs,pdk-fs" remote="LineageOS" />
+<project path="packages/modules/Connectivity" name="android_packages_modules_Connectivity" groups="pdk-cw-fs,pdk-fs" remote="LineageOS" />
+<project path="packages/modules/Nfc" name="android_packages_modules_Nfc" groups="pdk-cw-fs,pdk-fs" remote="LineageOS" />
+<project path="packages/modules/Permission" name="android_packages_modules_Permission" groups="pdk-cw-fs,pdk-fs" remote="LineageOS" />
+<project path="packages/modules/UprobeStats" name="android_packages_modules_UprobeStats" groups="pdk-cw-fs,pdk-fs" remote="LineageOS" />
+<project path="packages/modules/Virtualization" name="android_packages_modules_Virtualization" groups="pdk" remote="LineageOS" />
+<project path="packages/modules/Wifi" name="android_packages_modules_Wifi" groups="pdk-cw-fs,pdk-fs,sysui-studio" remote="LineageOS" />
+
+<!-- PACKAGES/PROVIDERS -->
+<project path="packages/providers/BlockedNumberProvider" name="android_packages_providers_BlockedNumberProvider" groups="pdk-fs" remote="LineageOS" />
+<project path="packages/providers/BookmarkProvider" name="android_packages_providers_BookmarkProvider" groups="pdk-fs" remote="LineageOS" />
+<project path="packages/providers/CalendarProvider" name="android_packages_providers_CalendarProvider" groups="pdk-cw-fs,pdk-fs" remote="LineageOS" />
+<project path="packages/providers/CallLogProvider" name="android_packages_providers_CallLogProvider" groups="pdk-fs" remote="LineageOS" />
+<project path="packages/providers/ContactsProvider" name="android_packages_providers_ContactsProvider" groups="pdk-cw-fs,pdk-fs" remote="LineageOS" />
+<project path="packages/providers/DownloadProvider" name="android_packages_providers_DownloadProvider" groups="pdk-cw-fs,pdk-fs" remote="LineageOS" />
+<project path="packages/providers/MediaProvider" name="android_packages_providers_MediaProvider" groups="pdk-cw-fs,pdk-fs" remote="LineageOS" />
+<project path="packages/providers/TelephonyProvider" name="android_packages_providers_TelephonyProvider" groups="pdk-cw-fs,pdk-fs" remote="LineageOS" />
+
+<!-- PACKAGES/SERVICES -->
+<project path="packages/services/Car" name="android_packages_services_Car" groups="pdk-cw-fs,pdk-fs" remote="LineageOS" />
+<project path="packages/services/DeviceAsWebcam" name="android_packages_services_DeviceAsWebcam" groups="pdk-cw-fs,pdk-fs" remote="LineageOS" />
+<project path="packages/services/Mms" name="android_packages_services_Mms" groups="pdk-cw-fs,pdk-fs" remote="LineageOS" />
+<project path="packages/services/Telecomm" name="android_packages_services_Telecomm" groups="pdk-cw-fs,pdk-fs" remote="LineageOS" />
+<project path="packages/services/Telephony" name="android_packages_services_Telephony" groups="pdk-cw-fs,pdk-fs" remote="LineageOS" />
+<project path="packages/wallpapers/LivePicker" name="android_packages_wallpapers_LivePicker" groups="pdk-fs" remote="LineageOS" />
+
+<!-- SYSTEM -->
+<project path="system/bpf" name="android_system_bpf" groups="pdk" remote="LineageOS" />
+<project path="system/chre" name="android_system_chre" groups="pdk" remote="LineageOS" />
+<project path="system/core" name="android_system_core" groups="pdk" remote="LineageOS" />
+<project path="system/extras" name="android_system_extras" groups="pdk" remote="LineageOS" />
+<project path="system/keymaster" name="android_system_keymaster" groups="pdk" remote="LineageOS" />
+<project path="system/libziparchive" name="android_system_libziparchive" groups="pdk" remote="LineageOS" />
+<project path="system/logging" name="android_system_logging" groups="pdk" remote="LineageOS" />
+<project path="system/media" name="android_system_media" groups="pdk" remote="LineageOS" />
+<project path="system/netd" name="android_system_netd" groups="pdk" remote="LineageOS" />
+<project path="system/security" name="android_system_security" groups="pdk" remote="LineageOS" />
+<project path="system/sepolicy" name="android_system_sepolicy" groups="pdk" remote="LineageOS" />
+<project path="system/update_engine" name="android_system_update_engine" groups="pdk" remote="LineageOS" />
+<project path="system/vold" name="android_system_vold" groups="pdk" remote="LineageOS" />
+
+<!-- MISC -->
+<project path="packages/inputmethods/LatinIME" name="android_packages_inputmethods_LatinIME" groups="pdk-fs" remote="LineageOS" />
+<project path="packages/inputmethods/LeanbackIME" name="android_packages_inputmethods_LeanbackIME" groups="pdk-fs" remote="LineageOS" />
+<project path="packages/screensavers/PhotoTable" name="android_packages_screensavers_PhotoTable" groups="pdk-fs" remote="LineageOS" />
+
+</manifest>

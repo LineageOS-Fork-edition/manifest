@@ -2,7 +2,7 @@
 <manifest>
 
   <remote  name="aosp"
-           fetch=".."
+           fetch="https://android.googlesource.com"
            review="https://android-review.googlesource.com/" />
   <default revision="refs/tags/android-16.0.0_r4"
            remote="aosp"
@@ -1041,5 +1041,12 @@
     <copyfile src="lk_inc.mk" dest="lk_inc.mk" />
   </project>
   <!-- END open-source projects -->
+
+  <!-- Track our own forks -->
+  <include name="remove.xml" />
+  <include name="lineage.xml" />
+  <include name="hardware.xml" />
+  <include name="androidone.xml" />
+  <!-- Track our own forks -->
 
 </manifest>
