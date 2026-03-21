@@ -3,6 +3,7 @@
 
 <!-- BUILD -->
 <remove-project name="platform/build" />
+<remove-project name="platform/build/release" />
 <remove-project name="platform/build/soong" />
 
 <!-- BIONIC -->
@@ -16,16 +17,14 @@
 <remove-project name="platform/development" />
 
 <!-- DEVICE -->
-<remove-project name="device/generic/car" />
 <remove-project name="device/generic/common" />
 <remove-project name="device/generic/goldfish" />
-<remove-project name="device/google/car" />
-<remove-project name="device/google/atv" />
 <remove-project name="device/google/contexthub" />
 
 <!-- EXTERNAL -->
 <remove-project name="platform/external/arm-trusted-firmware" />
 <remove-project name="platform/external/avb" />
+<remove-project name="platform/external/bouncycastle" />
 <remove-project name="platform/external/dng_sdk" />
 <remove-project name="platform/external/dtc" />
 <remove-project name="platform/external/e2fsprogs" />
@@ -61,23 +60,16 @@
 <remove-project name="kernel/configs" />
 
 <!-- PACKAGES/APPS -->
-<remove-project name="platform/packages/apps/Car/References" />
-<remove-project name="platform/packages/apps/Car/Settings" />
-<remove-project name="platform/packages/apps/Car/SystemUI" />
 <remove-project name="platform/packages/apps/CellBroadcastReceiver" />
 <remove-project name="platform/packages/apps/Contacts" />
-<remove-project name="platform/packages/apps/Dialer" />
 <remove-project name="platform/packages/apps/DocumentsUI" />
 <remove-project name="platform/packages/apps/EmergencyInfo" />
-<remove-project name="platform/packages/apps/Launcher3" />
 <remove-project name="platform/packages/apps/Messaging" />
 <remove-project name="platform/packages/apps/Settings" />
 <remove-project name="platform/packages/apps/SettingsIntelligence" />
 <remove-project name="platform/packages/apps/Stk" />
 <remove-project name="platform/packages/apps/Tag" />
 <remove-project name="platform/packages/apps/ThemePicker" />
-<remove-project name="platform/packages/apps/TvSettings" />
-<remove-project name="platform/packages/apps/TvSystemUI" />
 <remove-project name="platform/packages/apps/WallpaperPicker2" />
 
 <!-- PACKAGES/MODULES -->
@@ -102,7 +94,6 @@
 <remove-project name="platform/packages/providers/TelephonyProvider" />
 
 <!-- PACKAGES/SERVICES -->
-<remove-project name="platform/packages/services/Car" />
 <remove-project name="platform/packages/services/DeviceAsWebcam" />
 <remove-project name="platform/packages/services/Mms" />
 <remove-project name="platform/packages/services/Telecomm" />

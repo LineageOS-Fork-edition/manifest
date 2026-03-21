@@ -3,9 +3,6 @@
 
   <!-- LineageOS additions -->
   <project path="android" name="android" remote="LineageOS" />
-  <project path="device/lineage/atv" name="android_device_lineage_atv" remote="LineageOS" />
-  <project path="device/lineage/car" name="android_device_lineage_car" remote="LineageOS" />
-  <project path="device/lineage/sepolicy" name="android_device_lineage_sepolicy" remote="LineageOS" />
   <project path="external/bash" name="android_external_bash" remote="LineageOS" />
   <project path="external/chromium-webview/patches" name="android_external_chromium-webview_patches" groups="pdk" revision="main" remote="LineageOS" >
     <linkfile src="os_pickup.bp" dest="external/chromium-webview/Android.bp" />
@@ -27,38 +24,13 @@
   <project path="external/vim" name="android_external_vim" remote="LineageOS" />
   <project path="hardware/lineage/compat" name="android_hardware_lineage_compat" remote="LineageOS" />
   <project path="hardware/lineage/interfaces" name="android_hardware_lineage_interfaces" remote="LineageOS" />
-  <project path="lineage-sdk" name="android_lineage-sdk" remote="LineageOS" />
   <project path="packages/apps/Aperture" name="android_packages_apps_Aperture" remote="LineageOS" />
-  <project path="packages/apps/AudioFX" name="android_packages_apps_AudioFX" remote="LineageOS" />
   <project path="packages/apps/Backgrounds" name="android_packages_apps_Backgrounds" remote="LineageOS" />
-  <project path="packages/apps/Camelot" name="android_packages_apps_Camelot" remote="LineageOS" />
-  <project path="packages/apps/Catapult" name="android_packages_apps_Catapult" remote="LineageOS" />
-  <project path="packages/apps/DeskClock" name="android_packages_apps_DeskClock" groups="pdk-fs" remote="LineageOS" />
-  <project path="packages/apps/Etar" name="android_packages_apps_Etar" remote="LineageOS" />
   <project path="packages/apps/EuiccPolicy" name="android_packages_apps_EuiccPolicy" remote="LineageOS" />
-  <project path="packages/apps/ExactCalculator" name="android_packages_apps_ExactCalculator" remote="LineageOS" />
   <project path="packages/apps/FMRadio" name="android_packages_apps_FMRadio" remote="LineageOS" />
-  <project path="packages/apps/FlipFlap" name="android_packages_apps_FlipFlap" remote="LineageOS" />
-  <project path="packages/apps/Gallery2" name="android_packages_apps_Gallery2" groups="pdk-fs" remote="LineageOS" />
-  <project path="packages/apps/Glimpse" name="android_packages_apps_Glimpse" remote="LineageOS" />
-  <project path="packages/apps/Jelly" name="android_packages_apps_Jelly" remote="LineageOS" />
-  <project path="packages/apps/LineageCustomizer" name="android_packages_apps_LineageCustomizer" remote="LineageOS" />
-  <project path="packages/apps/LineageParts" name="android_packages_apps_LineageParts" remote="LineageOS" />
-  <project path="packages/apps/Profiles" name="android_packages_apps_Profiles" remote="LineageOS" />
-  <project path="packages/apps/Recorder" name="android_packages_apps_Recorder" remote="LineageOS" />
-  <project path="packages/apps/Seedvault" name="android_packages_apps_Seedvault" remote="LineageOS" />
-  <project path="packages/apps/SetupWizard" name="android_packages_apps_SetupWizard" remote="LineageOS" />
-  <project path="packages/apps/SimpleDeviceConfig" name="android_packages_apps_SimpleDeviceConfig" remote="LineageOS" />
-  <project path="packages/apps/SimpleSettingsConfig" name="android_packages_apps_SimpleSettingsConfig" remote="LineageOS" />
-  <project path="packages/apps/Twelve" name="android_packages_apps_Twelve" remote="LineageOS" />
   <project path="packages/apps/Updater" name="android_packages_apps_Updater" remote="LineageOS" />
-  <project path="packages/overlays/Lineage" name="android_packages_overlays_Lineage" remote="LineageOS" />
-  <project path="packages/resources/devicesettings" name="android_packages_resources_devicesettings" remote="LineageOS" />
   <project path="prebuilts/extract-tools" name="android_prebuilts_extract-tools" clone-depth="1" remote="LineageOS" />
-  <project path="tools/extract-utils" name="android_tools_extract-utils" remote="LineageOS" />
   <project path="vendor/apn" name="android_vendor_apn" revision="main" remote="LineageOS" />
-  <project path="vendor/crowdin" name="android_vendor_crowdin" remote="LineageOS" />
-  <project path="vendor/lineage" name="android_vendor_lineage" remote="LineageOS" />
 
   <!-- Legacy AOSP additions -->
   <project path="external/tinyxml" name="platform/external/tinyxml" groups="pdk" remote="aosp" revision="refs/tags/android-11.0.0_r46" />

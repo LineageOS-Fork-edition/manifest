@@ -1,4 +1,56 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <manifest>
 
+  <remote  name="AndroidOne"
+           fetch="https://github.com/LineageOS-Fork-edition"
+           revision="refs/heads/16-QPR2" />
+
+<!-- BUILD -->
+<project path="build/make" name="build" groups="pdk,sysui-studio" remote="AndroidOne" >
+    <linkfile src="CleanSpec.mk" dest="build/CleanSpec.mk" />
+    <linkfile src="buildspec.mk.default" dest="build/buildspec.mk.default" />
+    <linkfile src="core" dest="build/core" />
+    <linkfile src="envsetup.sh" dest="build/envsetup.sh" />
+    <linkfile src="target" dest="build/target" />
+    <linkfile src="tools" dest="build/tools" />
+</project>
+<project path="build/soong" name="build_soong" groups="pdk,tradefed,sysui-studio" remote="AndroidOne" >
+    <linkfile src="root.bp" dest="Android.bp" />
+    <linkfile src="bootstrap.bash" dest="bootstrap.bash" />
+</project>
+<project path="build/release" name="build_release" groups="pdk,tradefed,sysui-studio" remote="AndroidOne" />
+
+<!-- DEVICE -->
+<project path="device/lineage/sepolicy" name="device_lineage_sepolicy" remote="AndroidOne" />
+
+<!-- EXTERNAL -->
+<project path="external/bouncycastle" name="external_bouncycastle" groups="pdk" remote="AndroidOne" />
+
+<!-- FRAMEWORKS -->
+<project path="frameworks/av" name="frameworks_av" groups="pdk,sysui-studio" remote="AndroidOne" />
+<project path="frameworks/base" name="frameworks_base" groups="pdk-cw-fs,pdk-fs,sysui-studio" remote="AndroidOne" />
+<project path="frameworks/native" name="frameworks_native" groups="pdk" remote="AndroidOne" />
+<project path="frameworks/opt/telephony" name="frameworks_opt_telephony" groups="pdk,sysui-studio" remote="AndroidOne" />
+
+<!-- PACKAGES/APPS -->
+<project path="packages/apps/Settings" name="packages_apps_Settings" groups="pdk-fs,pdk-cw-tvc,sysui-studio" remote="AndroidOne" />
+<project path="packages/apps/ParanoidSense" name="packages_apps_ParanoidSense" remote="AndroidOne" />
+<project path="packages/apps/ColumbusService" name="packages_apps_ColumbusService" remote="AndroidOne" />
+
+<!-- PACKAGES/MODULES -->
+<project path="packages/modules/Connectivity" name="packages_modules_Connectivity" groups="pdk-cw-fs,pdk-fs" remote="AndroidOne" />
+
+<!-- PACKAGES/SERVICE -->
+<project path="packages/services/Telecomm" name="packages_services_Telecomm" groups="pdk-cw-fs,pdk-fs" remote="AndroidOne" />
+
+<!-- SYSTEM -->
+<project path="system/core" name="system_core" groups="pdk" remote="AndroidOne" />
+<project path="system/netd" name="system_netd" groups="pdk" remote="AndroidOne" />
+
+<!-- VENDOR -->
+<project path="vendor/aosp" name="vendor_aosp" remote="AndroidOne" />
+
+<!-- MISC -->
+<project path="tools/extract-utils" name="tools_extract-utils" remote="AndroidOne" />
+
 </manifest>
